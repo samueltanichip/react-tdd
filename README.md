@@ -7,12 +7,12 @@
 
 ## 📦 Dependências
 
-- **`ts-node`**: apenas é necessário caso o projeto esteja usando 
-Typescript.
+- **`ts-jest`:** um *transformer* do Jest para conseguirmos testar
+aplicações escritas em TypeScript;
 
 - **`jest` e `@types/jest`:** framework utilizado para realizar testes 
 unitários e o pacote necessário para utilização do jest com typescript, 
-respectivamente.
+respectivamente;
 
 - **`jsdom` e `jest-environment-jsdom`:** de acordo com a documentação 
 do `jsdom`, ele é uma implementação em JavaScript puro de muitos 
@@ -41,21 +41,21 @@ declarativos e fáceis de ler e manter;
 
 - **`@testing-library/user-event`:** busca simular os eventos reais que 
 aconteceriam no navegador enquanto o usuário interage com ele. Por 
-exemplo, `userEvent.click(checkbox)` alteraria o estado do checkbox.
-
-- **`@babel/core`, `@babel/preset-env`, `@babel/preset-react` e `babel-jest`:**
-Apesar do Testing library testar os componentes, ele ainda não consegue 
-interpretá-los, por isso, precisamos do babel para fazer com que os
-componentes sejam entendidos.
+exemplo, `userEvent.click(checkbox)` alteraria o estado do checkbox;
 
 - **`identity-obj-proxy`:** útil para testar importações triviais de 
 webpack. Por exemplo, você pode dizer ao Jest para simular este objeto 
-como módulos CSS importados; então todas as pesquisas de `className` 
+como módulos CSS importados, então todas as pesquisas de `className` 
 no objeto de estilos importado serão retornadas como estão. 
   
   Resumindo, serve para, quando importarmos arquivos como imagens ou 
 estilos em nosso código, não dê problema nos testes. E isso é feito 
 através de mocks, ou seja, uma simulação desses arquivos.
+
+> Fontes que me ajudaram nesse setup: 
+>
+> - [React Hero: TypeScript + Jest + React Testing Library setup](https://medium.com/tinyso/react-hero-typescript-jest-react-testing-library-setup-c2ecce18ec96)
+> - [ Configurando Jest + React Testing Library no Vite #Dia23 ](https://www.youtube.com/watch?v=HLgY_Cmqe14)
 
 ## 📝 Tipos de testes
 
