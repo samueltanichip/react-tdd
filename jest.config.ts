@@ -1,8 +1,11 @@
 module.exports = {
   testEnvironment: 'jest-environment-jsdom',
-  setupFilesAfterEnv: ['<rootDir>/.jest/setup-tests.ts'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   moduleNameMapper: {
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/.jest/mocks/file-mock.ts',
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/.jest/file-mock.ts',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy'
+  },
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest'
   }
 };
