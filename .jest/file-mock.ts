@@ -1,3 +1,3 @@
-// responsável por fazer os mocks dos arquivos com 
-// as extensões informadas em jest.config.ts
+// responsible for mocking the files with 
+// the extensions informed in jest.config.ts
 module.exports = 'test-file-stub';
