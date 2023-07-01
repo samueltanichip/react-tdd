@@ -5,8 +5,8 @@ import './form.css';
 
 export const Form = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const addParticipant = useParticipant();
-  const errorMessage = useErrorMessage();
+  const { addParticipant } = useParticipant();
+  const { errorMessage } = useErrorMessage();
   const [name, setName] = useState('');
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
