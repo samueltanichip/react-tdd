@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot of Home page should be rendered correctly 1`] = `
+<div>
+  <form>
+    <input
+      placeholder="New participant"
+      type="text"
+      value=""
+    />
+    <button
+      disabled=""
+    />
+  </form>
+  <ul />
+  <button
+    class="draw-button"
+    disabled=""
+  >
+    Sortear!
+  </button>
+</div>
+`;
