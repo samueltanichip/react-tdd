@@ -1,5 +1,5 @@
 import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { participantsListState } from '../recoil/atom';
+import { participantsListState } from './recoil/atom';
 import { useErrorMessage } from './useErrorMessage';
 
 export const useParticipant = () => {
