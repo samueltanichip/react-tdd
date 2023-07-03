@@ -52,10 +52,19 @@ no objeto de estilos importado serão retornadas como estão.
 estilos em nosso código, não dê problema nos testes. E isso é feito 
 através de mocks, ou seja, uma simulação desses arquivos.
 
-> Fontes que me ajudaram nesse setup: 
->
-> - [React Hero: TypeScript + Jest + React Testing Library setup](https://medium.com/tinyso/react-hero-typescript-jest-react-testing-library-setup-c2ecce18ec96)
-> - [ Configurando Jest + React Testing Library no Vite #Dia23 ](https://www.youtube.com/watch?v=HLgY_Cmqe14)
+### Referências
+
+Ideia do projeto:
+[[Alura] React: testando os seus componentes](https://cursos.alura.com.br/course/react-testando-componentes)
+
+Para fazer o setup: 
+
+➜ [[Medium] React Hero: TypeScript + Jest + React Testing Library setup](https://medium.com/tinyso/react-hero-typescript-jest-react-testing-library-setup-c2ecce18ec96)
+
+➜ [[Youtube] Configurando Jest + React Testing Library no Vite #Dia23 ](https://www.youtube.com/watch?v=HLgY_Cmqe14)
+
+Para mockar alguns hooks:
+[[Medium] Mocking hooks for testing with jest and react-testing-library](https://chanonroy.medium.com/mocking-hooks-for-testing-with-jest-and-react-testing-library-d34505616d12)
 
 <h4 align="center">🚧 Readme em construção 👷🏻‍♀️</h4>
 
