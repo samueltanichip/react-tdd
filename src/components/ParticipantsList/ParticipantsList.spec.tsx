@@ -40,4 +40,8 @@ describe('ParticipantsList Tests', () => {
     
     expect(items).toHaveLength(mockParticipantList.length);
   });
+
+  afterAll(() => {
+    jest.resetAllMocks();
+  });
 });

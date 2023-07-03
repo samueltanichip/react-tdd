@@ -10,13 +10,12 @@ describe('Form Tests', () => {
       </RecoilRoot>
     );
   
-  
     const input = screen.getByPlaceholderText('New participant');
     const button = screen.getByRole('button');
   
     expect(input).toBeInTheDocument();
     expect(button).toBeDisabled();
-  }),
+  });
 
   it('should add new participant when the input is filled', () => {
     // Arrange: render the component and prepare requirements
@@ -56,7 +55,7 @@ describe('Form Tests', () => {
     });
 
     fireEvent.click(button);
-
+    
     fireEvent.change(input, {
       target: { value: 'Ana Catarina' }
     });
@@ -107,7 +106,10 @@ describe('Form Tests', () => {
 
     errorAlert = screen.queryByRole('alert');
 
-    jest.clearAllTimers();
     expect(errorAlert).toBeNull();
+  });
+
+  afterAll(() => {
+    jest.clearAllTimers();
   });
 });
