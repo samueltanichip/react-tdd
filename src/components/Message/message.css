@@ -1,0 +1,30 @@
+.error-message {
+  width: 100%;
+  padding: .75rem;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.error-message--default {
+  border: 1px solid #b6b5b5;
+  color: #b6b5b5;
+  background-color: rgba(182, 181, 181, .1);
+}
+
+.error-message--warn {
+  border: 1px solid #dfb80c;
+  color: #dfb80c;
+  background-color: rgba(223, 184, 12, .1);
+}
+
+.error-message--error {
+  border: 1px solid #fa2121;
+  color: #fa2121;
+  background-color: rgba(250, 33, 33, .1);
+}
+
+.error-message--info {
+  border: 1px solid #4088f5;
+  color: #4088f5;
+  background-color: rgba(64, 136, 245, .1);
+}
