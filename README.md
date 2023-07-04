@@ -1,9 +1,37 @@
 # 👩‍🔬 React TDD
 
 <p align="center">
-  Projeto com foco em desenvolver o frontend orientado a testes,
+  Projeto com foco em desenvolver o frontend orientado à testes,
   utilizando o React Testing Library e o Jest 🃏
 </p>
+
+## 🛠️ Pré-requisitos
+
+- [Git](https://git-scm.com/downloads) para baixar o projeto
+- [Node.js](https://nodejs.org/en) para executar o código localmente
+
+## 📥 Instalação
+
+1. Clone o repositório:
+```bash
+git clone git@github.com:<username>/react-tdd.git
+```
+
+2. Navegue até a pasta do repositório:
+```bash
+cd react-tdd
+```
+
+3. Instale as dependências:
+```bash
+npm i
+```
+
+4. Rodando a aplicação:
+```bash
+npm run test # para rodar todos os testes da aplicação
+npm run dev # para rodar a aplicação
+```
 
 ## 📦 Dependências
 
@@ -52,7 +80,7 @@ no objeto de estilos importado serão retornadas como estão.
 estilos em nosso código, não dê problema nos testes. E isso é feito 
 através de mocks, ou seja, uma simulação desses arquivos.
 
-### Referências
+## 🔗 Referências
 
 Ideia do projeto:
 [[Alura] React: testando os seus componentes](https://cursos.alura.com.br/course/react-testando-componentes)
@@ -65,8 +93,6 @@ Para fazer o setup:
 
 Para mockar alguns hooks:
 [[Medium] Mocking hooks for testing with jest and react-testing-library](https://chanonroy.medium.com/mocking-hooks-for-testing-with-jest-and-react-testing-library-d34505616d12)
-
-<h4 align="center">🚧 Readme em construção 👷🏻‍♀️</h4>
 
 <hr>
 
