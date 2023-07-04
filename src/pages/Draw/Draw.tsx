@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react';
 import { useParticipant } from '../../hooks/useParticipant';
 import { useDrawer } from '../../hooks/useDrawer';
+import { Heading } from '../../components/Heading/Heading';
+import './draw.css';
 
 export const Draw = () => {
   const { participantList } = useParticipant();
@@ -12,14 +14,18 @@ export const Draw = () => {
     event.preventDefault();
 
     setDrawnFriend(drawResult.get(currentParticipant));
+
+    setTimeout(() => setDrawnFriend(''), 5000);
   };
 
   return (
-    <section>
-      <form onSubmit={handleSubmit}>
+    <section className="draw">
+      <Heading title="Descubra quem você tirou!" />
+      <form className="view-result__form" onSubmit={handleSubmit}>
         <select 
           name="currentParticipant" 
           id="current-participant"
+          className="form__select"
           placeholder="Selecione seu nome"
           value={currentParticipant}
           onChange={event => setCurrentParticipant(event.target.value)}
@@ -37,12 +43,10 @@ export const Draw = () => {
       </form>
 
       {
-        drawnFriend ? 
-          <p role="alert">{drawnFriend}</p> 
-          : 
-          <p role="alert">
-            Sorteio não realizado
-          </p>
+        drawnFriend && 
+        <p className="draw-result" role="alert">
+          {drawnFriend}
+        </p>
       }
     </section>
   );
