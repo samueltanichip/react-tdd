@@ -1,3 +1,11 @@
-input {
-  color: #000;
+.add-participant__form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form__input {
+  padding: .75rem .5rem;
 }
