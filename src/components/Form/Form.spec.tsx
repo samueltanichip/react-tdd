@@ -10,7 +10,7 @@ describe('Form Tests', () => {
       </RecoilRoot>
     );
   
-    const input = screen.getByPlaceholderText('New participant');
+    const input = screen.getByPlaceholderText('Novo participante');
     const button = screen.getByRole('button');
   
     expect(input).toBeInTheDocument();
@@ -25,7 +25,7 @@ describe('Form Tests', () => {
       </RecoilRoot>
     );
   
-    const input = screen.getByPlaceholderText('New participant');
+    const input = screen.getByPlaceholderText('Novo participante');
     const button = screen.getByRole('button');
 
     // Act: perform user steps
@@ -47,7 +47,7 @@ describe('Form Tests', () => {
       </RecoilRoot>
     );
   
-    const input = screen.getByPlaceholderText('New participant');
+    const input = screen.getByPlaceholderText('Novo participante');
     const button = screen.getByRole('button');
 
     fireEvent.change(input, {
@@ -78,7 +78,7 @@ describe('Form Tests', () => {
       </RecoilRoot>
     );
   
-    const input = screen.getByPlaceholderText('New participant');
+    const input = screen.getByPlaceholderText('Novo participante');
     const button = screen.getByRole('button');
 
     fireEvent.change(input, {
