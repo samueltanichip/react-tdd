@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 import { Draw } from './Draw';
 
@@ -58,6 +58,33 @@ describe('Draw Page Tests', () => {
     const drawResult = screen.getByRole('alert');
 
     expect(drawResult).toBeInTheDocument();
+  });
+
+  it('should disappear with the drawn friend after timers', () => {
+    jest.useFakeTimers();
+
+    render(
+      <RecoilRoot>
+        <Draw />
+      </RecoilRoot>
+    );
+
+    const select = screen.getByPlaceholderText('Selecione seu nome');
+    const button = screen.getByRole('button');
+
+    fireEvent.change(select, {
+      target: { value: mockParticipantList[0] }
+    });
+
+    fireEvent.click(button);
+
+    act(() => {
+      jest.runOnlyPendingTimers();
+    });
+
+    const drawResult = screen.queryByRole('alert');
+
+    expect(drawResult).not.toBeInTheDocument();
   });
 
   afterAll(() => {
