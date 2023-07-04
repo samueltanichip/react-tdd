@@ -1,6 +1,7 @@
 import { FormEvent, useRef, useState } from 'react';
 import { useParticipant } from '../../hooks/useParticipant';
 import { useErrorMessage } from '../../hooks/useErrorMessage';
+import { Message } from '../Message/Message';
 import './form.css';
 
 export const Form = () => {
@@ -18,17 +19,20 @@ export const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        ref={inputRef}
-        type="text"
-        value={name}
-        onChange={event => setName(event.target.value)} 
-        placeholder="New participant" 
-      />
-      <button disabled={!name}></button>
-
-      {errorMessage && <span role="alert">{errorMessage}</span>}
-    </form>
+    <>
+      {errorMessage && <Message type="error" title={errorMessage} />}
+      
+      <form className="add-participant__form" onSubmit={handleSubmit}>
+        <input 
+          ref={inputRef}
+          type="text"
+          className="form__input"
+          value={name}
+          onChange={event => setName(event.target.value)} 
+          placeholder="Novo participante" 
+        />
+        <button disabled={!name}>Adicionar</button>
+      </form>
+    </>
   );
 };
