@@ -2,22 +2,38 @@
 
 exports[`Snapshot of Home page should be rendered correctly 1`] = `
 <div>
-  <form>
-    <input
-      placeholder="New participant"
-      type="text"
-      value=""
+  <section
+    class="home"
+  >
+    <h1
+      class="heading"
+    >
+      Liste os participantes do amigo secreto!
+    </h1>
+    <form
+      class="add-participant__form"
+    >
+      <input
+        class="form__input"
+        placeholder="Novo participante"
+        type="text"
+        value=""
+      />
+      <button
+        disabled=""
+      >
+        Adicionar
+      </button>
+    </form>
+    <ul
+      class="participants__list"
     />
     <button
+      class="draw-button"
       disabled=""
-    />
-  </form>
-  <ul />
-  <button
-    class="draw-button"
-    disabled=""
-  >
-    Sortear!
-  </button>
+    >
+      Sortear!
+    </button>
+  </section>
 </div>
 `;
