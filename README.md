@@ -35,6 +35,9 @@ npm run dev # para rodar a aplicação
 
 ## 📦 Dependências
 
+- **`ts-node`:** pacote necessário para executar código TypeScript no
+Node.js;
+
 - **`ts-jest`:** um *transformer* do Jest para conseguirmos testar
 aplicações escritas em TypeScript;
 
