@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     // Instala a versão especificada do Node.js (opcional, se estiver usando nvm)
-                    sh '''
+                    bat '''
                         nvm install 18
                         nvm use 18
                     '''
@@ -30,8 +30,8 @@ pipeline {
             steps {
                 script {
                     echo 'Instalando dependências...'
-                    sh 'npm install' // Para npm
-                    // sh 'yarn install' // Para yarn
+                    bat 'npm install' // Para npm
+                    // bat 'yarn install' // Para yarn
                     // No Windows:
                     bat 'npm install' // Para npm
                     // bat 'yarn install' // Para yarn
@@ -44,8 +44,8 @@ pipeline {
             steps {
                 script {
                     echo 'Executando testes...'
-                    sh 'npm test' // Para npm
-                    // sh 'yarn test' // Para yarn
+                    bat 'npm test' // Para npm
+                    // bat 'yarn test' // Para yarn
                     // No Windows:
                     bat 'npm test' // Para npm
                     // bat 'yarn test' // Para yarn
@@ -58,8 +58,8 @@ pipeline {
             steps {
                 script {
                     echo 'Construindo o projeto...'
-                    sh 'npm run build' // Para npm
-                    // sh 'yarn build' // Para yarn
+                    bat 'npm run build' // Para npm
+                    // bat 'yarn build' // Para yarn
                     // No Windows:
                     bat 'npm run build' // Para npm
                     // bat 'yarn build' // Para yarn
@@ -73,7 +73,7 @@ pipeline {
                 script {
                     echo 'Realizando deploy...'
                     // Adicione aqui os comandos para deploy (ex: deploy para um servidor ou cloud)
-                    sh 'echo "Deploy realizado com sucesso!"'
+                    bat 'echo "Deploy realizado com sucesso!"'
                     // No Windows:
                     bat 'echo "Deploy realizado com sucesso!"'
                 }
